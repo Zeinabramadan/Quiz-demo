@@ -1,0 +1,10 @@
+@import '../../assets/sass/main';
+.card-body {
+  i,
+  svg {
+    color: $main-color;
+  }
+  i {
+    font-size: 50px;
+  }
+}

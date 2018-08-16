@@ -1,0 +1,21 @@
+@import '../../../../../assets/sass/main';
+.quiz_manager {
+  .list-group {
+    .list-group-item {
+      color: #555;
+      cursor: pointer;
+    }
+    .active {
+      background-color: $main-color;
+      border-color: $main-color;
+      color: $white;
+    }
+  }
+  .card-footer {
+    a {
+      &.btn:first-child {
+        color: $white;
+      }
+    }
+  }
+}

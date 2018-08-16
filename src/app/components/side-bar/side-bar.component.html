@@ -1,0 +1,65 @@
+<aside class="app-aside">
+  <div class="sidebar-container ">
+    <nav>
+      <div class="navbar-title">
+        <span>Instractour Dashboard</span>
+      </div>
+      <ul class="main-navigation-menu">
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="instractour-dashboard">
+            <div class="item-content">
+              <div class="item-media">
+                <i class="ti ti-help"></i>
+              </div>
+              <div class="item-inner">
+                <span class="title"> Quiz manager </span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="instractour-dashboard/add">
+            <div class="item-content">
+              <div class="item-media">
+                <i class="ti-marker-alt"></i>
+              </div>
+              <div class="item-inner">
+                <span class="title"> Add new quiz </span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="navbar-title">
+        <span>Student Dashboard</span>
+      </div>
+      <ul class="main-navigation-menu">
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="student-dashboard">
+            <div class="item-content">
+              <div class="item-media">
+                <i class="ti-file"></i>
+              </div>
+              <div class="item-inner">
+                <span class="title"> Take Quiz</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="student-dashboard/quiz-result">
+            <div class="item-content">
+              <div class="item-media">
+                <i class="ti ti-desktop"></i>
+              </div>
+              <div class="item-inner">
+                <span class="title"> Quiz Result </span>
+              </div>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</aside>

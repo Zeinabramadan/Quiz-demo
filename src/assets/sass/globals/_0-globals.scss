@@ -1,0 +1,54 @@
+body {
+  direction: $dir;
+  font-family: 'Catamaran', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  margin: 0;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+*,
+*:hover,
+*:focus {
+  outline: 0 !important;
+}
+
+.add-q {
+  margin-bottom: 20px;
+}
+
+.card {
+  box-shadow: 0 0 5px #d4d4d4;
+  margin-bottom: 20px;
+  color: #5b5b60;
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+.float-right {
+  float: $right
+}
+
+.float-left {
+  float: $left
+}
+
+.form-control.ng-invalid.ng-touched {
+  border-color: #dc3545;
+}
+
+.form-control.ng-valid.ng-touched {
+  border-color: #28a745;
+}
+
+.add-q {
+  svg {
+    margin: 0 5px;
+  }
+}

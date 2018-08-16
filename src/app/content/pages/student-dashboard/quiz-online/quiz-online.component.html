@@ -1,0 +1,70 @@
+<div class="quiz-online">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="card">
+        <div class="card-body">
+          <ul class="list-unstyled row">
+            <li class="step col-md-3">
+              <span class="s-num text-azure">{{totalQ}}
+                <span class="s-text text-muted">Total</span>
+              </span>
+            </li>
+            <li class="step col-md-3">
+              <span class="s-num text-danger">{{wrongQ}}
+                <span class="s-text text-muted">Wrong</span>
+              </span>
+            </li>
+            <li class="step col-md-3">
+              <span class="s-num text-green">{{correctQ}}
+                <span class="s-text text-muted">Correct</span>
+              </span>
+            </li>
+            <li class="step col-md-3">
+              <span class="s-num text-orange">{{leftQ}}
+                <span class="s-text text-muted">Left</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h4># {{mainQuestion.name}}</h4>
+        </div>
+        <div class="card-body">
+          <div class="checkbox clip-check check-info">
+            <input type="checkbox" id="checkbox1" value="">
+            <label for="checkbox1">
+              Answer 1
+            </label>
+          </div>
+          <div class="checkbox clip-check check-info">
+            <input type="checkbox" id="checkbox2" value="">
+            <label for="checkbox2">
+              Answer 2
+            </label>
+          </div>
+          <div class="checkbox clip-check check-info">
+            <input type="checkbox" id="checkbox3" value="" checked="">
+            <label for="checkbox3">
+              Answer 3
+            </label>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-default">Skip</button>
+          <div class="btn btn-success float-right">Next Question
+            <i class="fa fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let question of questions">
+          {{question.name}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

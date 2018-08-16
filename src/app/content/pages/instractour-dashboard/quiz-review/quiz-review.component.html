@@ -1,0 +1,21 @@
+<div class="review">
+  <div class="card">
+    <div class="card-body">
+      <div class="media">
+        <img class="align-self-center mr-3" width="100" [src]="quizes.image" [alt]="quizes.name">
+        <div class="media-body">
+          <h5 class="mt-0">{{quizes.name}}</h5>
+          <span>{{quizes.completed}} completed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5>All question</h5>
+      <p *ngFor="let que of questions">
+        <a href="#">{{que.name}}</a>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+
+@mixin triangle($width, $direction, $color) {
+    @if ($direction == left) {
+        width:0; height: 0;
+        border-#{$left}: $width / 4 solid $color;
+        border-#{$right}: $width / 4 solid transparent;
+        border-bottom: $width / 4 solid transparent;
+        border-top: $width / 4 solid transparent;
+    } @else if ($direction == top) {
+        width:0; height: 0;
+        border-#{$left}: $width / 4 solid transparent;
+        border-#{$right}: $width / 4 solid transparent;
+        border-top: $width / 4 solid transparent;
+        border-bottom: $width / 4 solid $color;
+    } @else if($direction == bottom) {
+        width:0; height: 0;
+        border-#{$left}: $width / 4 solid transparent;
+        border-#{$right}: $width / 4 solid transparent;
+        border-bottom: $width / 4 solid transparent;
+        border-top: $width / 4 solid $color;
+    }
+}
+
+@mixin prefixer($prop, $value, $prefixes:()) {
+    @each $prefixe in $prefixes {
+        #{'-'+ $prefixe + '-' + $prop}: $value
+    }
+    #{$prop}: $value
+}
+
+@mixin keyframe($anime-name) {
+    @-webkit-keyframes #{$anime-name} {
+        @content;
+    }
+    @-moz-keyframes #{$anime-name} {
+        @content;
+    }
+    @keyframes #{$anime-name} {
+        @content;
+    }
+}

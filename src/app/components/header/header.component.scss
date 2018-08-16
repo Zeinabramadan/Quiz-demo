@@ -1,0 +1,34 @@
+@import '../../../assets/sass/main';
+.navigation {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1089;
+  border: none;
+  margin-bottom: 0;
+  height: 65px;
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: inherit;
+    border-bottom: 1px solid #c8c7cc;
+    a {
+      cursor: pointer;
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+  .active {
+    a {
+      color: $main-color;
+    }
+  }
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}

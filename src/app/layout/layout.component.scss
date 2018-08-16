@@ -1,0 +1,13 @@
+@import '../../assets/sass/main';
+#app {
+  height: auto;
+  min-height: 100%; //position: relative;
+  width: 100%;
+  overflow: hidden;
+  @media (min-width: 992px) {
+    padding-top: 65px;
+  }
+  .app-content {
+    height: 100%;
+  }
+}

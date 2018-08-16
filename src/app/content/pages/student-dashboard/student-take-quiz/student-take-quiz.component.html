@@ -1,0 +1,13 @@
+<div class="take-quiz">
+  <div class="card" *ngFor="let item of quizes; let i = index">
+    <div class="card-body">
+      <a (click)="onTakeQuiz(i)">
+        <div class="media">
+          <img class="align-self-center mr-3" width="100" [src]="item.image" [alt]="quizes.name">
+          <div class="media-body">
+            <h5 class="mt-0">{{item.name}}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>

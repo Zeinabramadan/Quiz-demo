@@ -1,0 +1,92 @@
+@import '../../../assets/sass/main';
+.app-aside {
+  background: $grey;
+  width: 260px;
+  float: left;
+  left: 0;
+  bottom: 0;
+  overflow: visible;
+  z-index: 1051;
+  @media (min-width: 992px) {
+    position: fixed;
+    top: 65px;
+    margin-top: 0;
+  }
+  .sidebar-container {
+    overflow-x: auto;
+    position: relative;
+    height: 100%;
+    nav {
+      min-height: 100%;
+      .navbar-title {
+        font-size: 10px;
+        letter-spacing: 0.2px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+      }
+      ul {
+        list-style: none;
+        margin: 10px 0;
+        padding: 0;
+        border-top: 1px solid #c8c7cc;
+        border-bottom: 1px solid #c8c7cc;
+        background: #F6F6F6 !important;
+        border-bottom-color: $grey !important;
+        border-top-color: $grey !important;
+        li {
+          border: none;
+          display: block;
+          position: relative;
+          margin: 0;
+          padding: 0;
+          a {
+            border: none;
+            font-weight: 300;
+            margin: 0;
+            position: relative;
+            margin-top: -1px !important;
+            font-size: 14px;
+            .item-content {
+              align-items: center;
+              display: table-row;
+              .item-media {
+                display: table-cell;
+                padding: 10px 15px 10px 15px;
+              }
+              .item-inner {
+                align-items: center;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                display: table-cell;
+                padding: 10px 15px 10px 0;
+                width: 100%;
+                color: #2c2f3b !important;
+                border-bottom-color: $grey;
+              }
+            }
+            i[class*="ti-"] {
+              margin-right: 5px;
+              display: inline-block;
+              font-size: 17px;
+              position: relative;
+              top: 2px;
+            }
+          }
+          &.active {
+            background: $darker-color;
+            color: $white;
+            span,
+            .item-media {
+              color: $white;
+            }
+            .item-inner {
+              border-bottom-color: $darker-color !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

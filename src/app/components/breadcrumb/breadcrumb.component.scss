@@ -1,0 +1,41 @@
+@import '../../../assets/sass/main';
+.bread {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  position: relative;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 20px;
+  .row {
+    margin: 0 15px;
+    .breadcrumb {
+      background-color: transparent !important;
+      font-size: 12px;
+      padding: 0 !important;
+      width: auto !important;
+      font-family: "Lato", sans-serif;
+      li {
+        a {
+          color: $main-color;
+        }
+      }
+    }
+    h2 {
+      color: #333;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 1;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 5px;
+    }
+    .desc {
+      font-family: Lato, sans-serif;
+      color: #777;
+      display: block;
+      font-size: 18px;
+      font-weight: 300;
+      margin-top: 10px;
+    }
+  }
+}

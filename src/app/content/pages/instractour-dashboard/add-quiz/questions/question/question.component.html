@@ -1,0 +1,52 @@
+<div class="add-q">
+  <button class="btn" [ngClass]="btns" (click)="showAddQueSection()">{{show ? 'Close' : 'Add Question'}}</button>
+</div>
+
+<form *ngIf="show" role="form" class="add-q-f form-horizontal" (ngSubmit)="onAddQuestion(fq.value)" #fq="ngForm">
+  <div class="row">
+    <div class="form-group col-md-12">
+      <div class="row">
+        <label class="col-sm-2 control-label" for="inputEmail3">
+          Question title
+        </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="name" ngModel required>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group col-md-6">
+      <div class="row">
+        <label class="col-sm-4 control-label" for="">
+          Type
+        </label>
+        <div class="col-sm-8">
+          <select id="" class="form-control" name="type" ngModel required>
+            <option *ngFor="let type of questionTypes" [value]="type">{{type}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <div class="row">
+        <label class="col-sm-4 control-label" for="">
+          Question score
+        </label>
+        <div class="col-sm-8">
+          <input class="form-control" type="number" name="score" value="20" ngModel required>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-success" type="submit" [disabled]="!fq.valid">Save</button>
+</form>
+<ul class="list-group">
+  <li class="list-group-item clearfix" *ngFor="let question of questions; let i = index;">
+    <span class="num text-muted">{{ i + 1 }}# </span> {{question.name}}
+    <button class="btn btn-outline-info float-right">
+      <i class="ti ti-pencil"></i>
+    </button>
+  </li>
+</ul>

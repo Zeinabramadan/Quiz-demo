@@ -1,0 +1,11 @@
+// Main direction Varaiables
+$dir: ltr;
+$left: left;
+$right: right;
+$black: #2c2f3b;
+$white: #fff;
+$grey: #DADADA;
+$main-color: #4BABBF;
+$darker-color: darken($main-color, 5%);
+$lighter-color: lighten($main-color, 5%);
+$transparent-color: transparentize($main-color, .3);

@@ -1,0 +1,25 @@
+/* Buttons */
+
+.button {
+  transition: all 0.3s ease 0s !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  cursor: pointer
+}
+
+.btn-default {
+  background-color: #ffffff;
+  border-color: #c8c7cc;
+  color: #8e8e93;
+}
+
+.btn-app {
+  background-color: $main-color;
+  border-color: $main-color;
+  color: $white;
+  &:hover {
+    background-color: $darker-color;
+    border-color: $darker-color;
+  }
+}
